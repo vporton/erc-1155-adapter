@@ -42,6 +42,14 @@ contract ERC1155withAdapter is ERC1155 {
         balances[_id][_from] = balances[_id][_from].sub(_value);
         balances[_id][_to]   = _value.add(balances[_id][_to]);
 
+        bytes memory _data;
+
+        if(_to.isContract()){
+            if(ERC165(_from).supportsInterface(0x4e2312e0)){
+                _doSafeTransferAcceptanceCheck(_from, _from, _to, _id, _value, _data);
+            }
+        }
+
         // MUST emit event
         emit TransferSingle(msg.sender, _from, _to, _id, _value);
         return true;
