@@ -1,6 +1,6 @@
 # EIP-1155 Adapter
 
-See also [another, more advanced ERC-1155 ↔ ERC-20 converter dApp](https://erc1155.portonvictor.org) ([source](https://github.com/vporton/wrap-tokens)).
+See also **[another, more advanced ERC-1155 ↔ ERC-20 converter dApp](https://erc1155.portonvictor.org)** ([source](https://github.com/vporton/wrap-tokens)).
 
 **[Read this contract in master branch](blob/master/contracts/ERC1155Adapter.sol)**
 
